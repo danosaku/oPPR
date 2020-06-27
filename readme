@@ -30,3 +30,12 @@ Usage: python final_retrain.py --epochs 50 --model_input out.h5 --model_output f
 --model_output "REQUIRED"
 
 
+Requirenments:
+
+Keras==2.2.5
+scikit-learn==0.19.1
+scipy==1.0.0
+numpy==1.14.0
+tensorflow-gpu==1.12.0
+
+
