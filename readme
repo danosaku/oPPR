@@ -19,7 +19,7 @@ Options:
 
        
 
-Finaly, you can use a new fully connected and decision layers initialized by Xavier method, and finetune the final pruned model using final_retrain.py script.
+Finally, you can use a new fully connected and decision layers initialized by Xavier method, and finetune the final pruned model using final_retrain.py script.
 
 
 
