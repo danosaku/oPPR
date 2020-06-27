@@ -1,0 +1,32 @@
+These are the scripts for training, pruning and retrain model after pruning on the CIFAR-10 dataset.
+
+First, you need to train Vgg-16 model and generate .H5 file using vgg-16-keras.py script.
+
+
+Usage: python vgg-16-keras.py --epochs 50 --learning_rate 1e-5 --model_output fileout.h5
+
+
+After, you are able to prune kernels in a specific layer using main.py script.
+
+Usage: python main.py --model_input fileout.h5 --epochs 10 --layer_number 1 --model_output out.h5
+
+Options:
+      --model_input "REQUIRED"
+      --layer_number: [1,13] "REQUIRED"
+      --retrain: progressive/complete
+      --criterion: sensitivity/weight_sum/APoZ
+      --model_output 
+
+       
+
+Finaly, you can use a new fully connected and decision layers initialized by Xavier method, and finetune the final pruned model using final_retrain.py script.
+
+
+
+
+Usage: python final_retrain.py --epochs 50 --model_input out.h5 --model_output final_model.h5 
+   
+--model_input  "REQUIRED"
+--model_output "REQUIRED"
+
+
